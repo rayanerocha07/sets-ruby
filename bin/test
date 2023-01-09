@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/program.rb"
+
+if (ARGV[0] == "test")
+  puts `ruby -Ilib:test ../test/index.rb`
+end
+
+if (ARGV.size == 0)
+  Program.new.start
+end
